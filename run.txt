@@ -1,0 +1,410 @@
+import os
+def clear():
+	os.system("clear")
+
+import requests,time
+from colorama import Fore
+reeee=requests.get("https://birddos.tk/keyim.txt").text
+kee=input("lütfen key giriniz:  ")
+clear()
+if (kee!=reeee):
+  theos=(f"""{Fore.LIGHTYELLOW_EX}\t       \n\n  ..... MNO!! ...................... MNNOO! ...\n ..... MMNO! ......................... MNNOO!! .\n..... MNOONNOO!   MMMMMMMMMMPPPOII!   MNNO!!!! .\n ... !O! NNO! MMMMMMMMMMMMMPPPOOOII!! NO! ....\n    ...... ! MMMMMMMMMMMMMPPPPOOOOIII! ! ...\n   ........ MMMMMMMMMMMMPPPPPOOOOOOII!! .....\n   ........ MMMMMOOOOOOPPPPPPPPOOOOMII! ...\n    ....... MMMMM..    OPPMMP    .,OMI! ....\n     ...... MMMM::   o.,OPMP,.o   ::I!! ...\n         .... NNM:::.,,OOPM!P,.::::!! ....\n          .. MMNNNNNOOOOPMO!!IIPPO!!O! .....\n         ... MMMMMNNNNOO:!!:!!IPPPPOO! ....\n           .. MMMMMNNOOMMNNIIIPPPOO!! ......\n          ...... MMMONNMMNNNIIIOO!..........\n       ....... MN MOMMMNNNIIIIIO! OO ..........\n    ......... MNO! IiiiiiiiiiiiI OOOO ...........\n  ...... NNN.MNO! . O!!!!!!!!!O . OONO NO! ........\n   .... MNNNNNO! ...OOOOOOOOOOO .  MMNNON!........\n   ...... MNNNNO! .. PPPPPPPPP .. MMNON!........\n      ...... OO! ................. ON! .......\n         ................................                               \n dev:@emretekno channel:@theostekno""")
+  print(theos)
+  print(f"""
+{Fore.RED}[0]{Fore.GREEN} -- üyelik bilgileri
+  
+{Fore.RED}[1]{Fore.GREEN} -- ad soyad sorgu 
+
+{Fore.RED}[2]{Fore.GREEN} -- TC sorgu 
+
+
+""") 
+  sec=input(Fore.RED+"lütfen bir seçenek seçiniz==> "+Fore.WHITE)
+  clear()
+  if sec=='0':
+  	uyelik=f"""   {Fore.LIGHTYELLOW_EX} Merhaba  Theos Sorgu Üyelik Bilgilerine Hoş geldiniz
+
+
+{Fore.GREEN}Fremium :
+  	
+{Fore.RED}•fiyat: {Fore.BLUE}ücretsiz  	
+{Fore.RED}•sorgular:{Fore.BLUE} ad soyad + TC sorgu
+
+
+
+{Fore.GREEN}Premium :
+	
+{Fore.RED}• Fiyat :{Fore.BLUE} 40 ₺
+{Fore.RED}• sorgular : {Fore.BLUE}ad soyad + tc + gsm + okul no sorgu
+  			
+  			
+  	{Fore.GREEN}üyelik almak isteyen @emretekno yazsın {Fore.WHITE}
+  		"""
+  	print(uyelik)
+  if sec=='1':
+  	print(theos)
+  	print(f"""
+{Fore.RED}[1]{Fore.GREEN} -- ad soyad ve doğum tarihi sorgu
+
+{Fore.RED}[2]{Fore.GREEN} -- ad soyad ve şehir sorgu
+""") 
+  	sek=input(Fore.RED+"lütfen bir seçenek seçiniz==> "+Fore.WHITE)
+  	clear()
+  	if sek=='1':
+  		print(theos)
+  		isi=input(Fore.GREEN+"sorgulanacak kişinin adını giriniz ==> "+Fore.WHITE)
+  		clear()
+  		print(theos)
+  		soy=input(Fore.GREEN+"sorgulanacak kişinin soyadını giriniz==> "+Fore.WHITE)
+  		clear()
+  		print(theos)
+  		tarih=input(Fore.GREEN+"sorgulanacak kişinin doğum tarihini giriniz \nörn : 1.1.2000    ==> "+Fore.WHITE)
+  		clear()
+  		print(theos)
+  		ree=requests.get("https://birddos.tk/oc.php?ad="+isi+"&soyad="+soy+"&dogum="+tarih).text
+  		if 'true' in ree:
+  			clear()
+  			isim=ree.split('"ADI":"')[1]
+  			isim=isim.split('","SOYADI')[0]
+  			soyisim=ree.split('SOYADI":"')[1]
+  			soyisim=soyisim.split('","DOGUMTARIHI')[0]
+  			tarih=ree.split('DOGUMTARIHI":"')[1]
+  			tarih=tarih.split('","NUFUSIL')[0]
+  			il=ree.split('NUFUSIL":"')[1]
+  			il=il.split('","NUFUSILCE')[0]
+  			ilce=ree.split('NUFUSILCE":"')[1]
+  			ilce=ilce.split('","ANNEADI')[0]
+  			anneadi=ree.split('ANNEADI":"')[1]
+  			anneadi=anneadi.split('","ANNETC')[0]
+  			annetc=ree.split('ANNETC":"')[1]
+  			annetc=annetc.split('","BABAADI')[0]
+  			babaadi=ree.split('BABAADI":"')[1]
+  			babaadi=babaadi.split('","BABATC')[0]
+  			babatc=ree.split('BABATC":"')[1]
+  			babatc=babatc.split('","UYRUK')[0]
+  			uyruk=ree.split('UYRUK":"')[1]
+  			uyruk=uyruk.split('"}]}')[0]
+  			print(Fore.RED+"-----------------------------------------------------------\n\n")
+  			print(f"{Fore.BLUE}[1]{Fore.YELLOW} İsim =>  {Fore.LIGHTGREEN_EX}"+isim)
+	  		print(f"{Fore.BLUE}[2]{Fore.YELLOW} Soyisim=>{Fore.LIGHTGREEN_EX} "+soyisim)
+  			print(f"{Fore.BLUE}[3] {Fore.YELLOW}Doğum tarihi =>{Fore.LIGHTGREEN_EX}"+tarih)
+  			print(f"{Fore.BLUE}[4] {Fore.YELLOW}Anne adı =>{Fore.LIGHTGREEN_EX} "+anneadi)
+  			print(f"{Fore.BLUE}[5] {Fore.YELLOW}Anne tc => {Fore.LIGHTGREEN_EX}"+annetc)
+  			print(f"{Fore.BLUE}[6] {Fore.YELLOW}Baba adı => {Fore.LIGHTGREEN_EX}"+babaadi)
+  			print(f"{Fore.BLUE}[7] {Fore.YELLOW}Baba tc =>{Fore.LIGHTGREEN_EX} "+babatc)
+  			print(f"{Fore.BLUE}[8]{Fore.YELLOW} Adres il =>{Fore.LIGHTGREEN_EX} "+il)
+  			print(f"{Fore.BLUE}[9] {Fore.YELLOW}Adres ilçe=>{Fore.LIGHTGREEN_EX} "+ilce)
+  			print(f"{Fore.BLUE}[10]{Fore.YELLOW} Uyruk =>{Fore.LIGHTGREEN_EX}"+uyruk)
+  		
+  			print(Fore.RED+"-----------------------------------------------------------"+Fore.WHITE)
+  		if 'param error' in ree:
+  			clear()
+  			print(theos)
+  			print(Fore.RED+"Eksik veya hatalı girdiniz lütfen tekrar deneyiniz...")
+  		if 'not found' in ree:
+  			clear()
+  			print(Fore.RED+"kişi bulunmadı hatalı yazmış olabilirsiniz..."+Fore.WHITE)
+  	if sek=='2':
+  		print(theos)
+  		isim=input(Fore.GREEN+"sorgulanacak kişinin adını giriniz ==> "+Fore.WHITE)
+  		clear()
+  		print(theos)
+  		soyisim=input(Fore.GREEN+"sorgulanacak kişinin soyadını giriniz==> "+Fore.WHITE)
+  		clear()
+  		print(theos)
+  		il=input(Fore.GREEN+"sorgulanacak kişinin şehrini giriniz==> "+Fore.WHITE)
+  		clear()
+  		print(theos)
+  		req =requests.get("http://birddos.tk/oc.php?ad="+isim+"&soyad="+soyisim+"&adresil="+il,time.sleep(5)).text 
+  		clear()
+  		if 'true' in req:
+  			clear()
+  			print(Fore.WHITE+req)
+  		if 'param error' in req:
+  			clear()
+  			print(theos)
+  			print(Fore.RED+"Eksik veya hatalı girdiniz lütfen tekrar deneyiniz...")
+  		elif 'not found' in req:
+  			print(Fore.RED+"kişi bulunmadı hatalı yazmış olabilirsiniz..."+Fore.WHITE)
+  if sec=='2':
+  	clear()
+  	print(theos)
+  	tc=input(Fore.GREEN+"TC kimlik numarası gir==> "+Fore.WHITE) 
+  	clear()
+  	r= requests.get("http://birddos.tk/oc.php?tc="+tc,time.sleep(5)).text
+  	
+  	if 'true"' in r:
+  		clear()
+  		isim=r.split('"ADI":"')[1]
+  		isim=isim.split('","SOYADI')[0]
+  		soyisim=r.split('SOYADI":"')[1]
+  		soyisim=soyisim.split('","DOGUMTARIHI')[0]
+  		tarih=r.split('DOGUMTARIHI":"')[1]
+  		tarih=tarih.split('","NUFUSIL')[0]
+  		il=r.split('NUFUSIL":"')[1]
+  		il=il.split('","NUFUSILCE')[0]
+  		ilce=r.split('NUFUSILCE":"')[1]
+  		ilce=ilce.split('","ANNEADI')[0]
+  		anneadi=r.split('ANNEADI":"')[1]
+  		anneadi=anneadi.split('","ANNETC')[0]
+  		annetc=r.split('ANNETC":"')[1]
+  		annetc=annetc.split('","BABAADI')[0]
+  		babaadi=r.split('BABAADI":"')[1]
+  		babaadi=babaadi.split('","BABATC')[0]
+  		babatc=r.split('BABATC":"')[1]
+  		babatc=babatc.split('","UYRUK')[0]
+  		uyruk=r.split('UYRUK":"')[1]
+  		uyruk=uyruk.split('"}]}')[0]
+  		
+  		print(Fore.RED+"-----------------------------------------------------------\n\n")
+  		print(f"{Fore.BLUE}[1]{Fore.YELLOW} İsim =>  {Fore.LIGHTGREEN_EX}"+isim)
+  		print(f"{Fore.BLUE}[2]{Fore.YELLOW} Soyisim=>{Fore.LIGHTGREEN_EX} "+soyisim)
+  		print(f"{Fore.BLUE}[3] {Fore.YELLOW}Doğum tarihi =>{Fore.LIGHTGREEN_EX}"+tarih)
+  		print(f"{Fore.BLUE}[4] {Fore.YELLOW}Anne adı =>{Fore.LIGHTGREEN_EX} "+anneadi)
+  		print(f"{Fore.BLUE}[5] {Fore.YELLOW}Anne tc => {Fore.LIGHTGREEN_EX}"+annetc)
+  		print(f"{Fore.BLUE}[6] {Fore.YELLOW}Baba adı => {Fore.LIGHTGREEN_EX}"+babaadi)
+  		print(f"{Fore.BLUE}[7] {Fore.YELLOW}Baba tc =>{Fore.LIGHTGREEN_EX} "+babatc)
+  		print(f"{Fore.BLUE}[8]{Fore.YELLOW} Adres il =>{Fore.LIGHTGREEN_EX} "+il)
+  		print(f"{Fore.BLUE}[9] {Fore.YELLOW}Adres ilçe=>{Fore.LIGHTGREEN_EX} "+ilce)
+  		print(f"{Fore.BLUE}[10]{Fore.YELLOW} Uyruk =>{Fore.LIGHTGREEN_EX}"+uyruk)
+  		
+  		print(Fore.RED+"-----------------------------------------------------------"+Fore.WHITE) 
+  	elif 'param error' in r:
+  		clear()
+  		print(theos)
+  		print(Fore.RED+"Eksik veya hatalı girdiniz lütfen tekrar deneyiniz...")
+  	elif 'not found' in r:
+  		clear()
+  		print(theos)
+  		print(Fore.RED+"TC kimlik numarasını kontrol edin sorun devam ederse @emretekno telegram hesabından ulaşın..."+Fore.WHITE)
+if kee==reeee:
+    theos=(f"""{Fore.LIGHTYELLOW_EX}\t       \n\n  ..... MNO!! ...................... MNNOO! ...\n ..... MMNO! ......................... MNNOO!! .\n..... MNOONNOO!   MMMMMMMMMMPPPOII!   MNNO!!!! .\n ... !O! NNO! MMMMMMMMMMMMMPPPOOOII!! NO! ....\n    ...... ! MMMMMMMMMMMMMPPPPOOOOIII! ! ...\n   ........ MMMMMMMMMMMMPPPPPOOOOOOII!! .....\n   ........ MMMMMOOOOOOPPPPPPPPOOOOMII! ...\n    ....... MMMMM..    OPPMMP    .,OMI! ....\n     ...... MMMM::   o.,OPMP,.o   ::I!! ...\n         .... NNM:::.,,OOPM!P,.::::!! ....\n          .. MMNNNNNOOOOPMO!!IIPPO!!O! .....\n         ... MMMMMNNNNOO:!!:!!IPPPPOO! ....\n           .. MMMMMNNOOMMNNIIIPPPOO!! ......\n          ...... MMMONNMMNNNIIIOO!..........\n       ....... MN MOMMMNNNIIIIIO! OO ..........\n    ......... MNO! IiiiiiiiiiiiI OOOO ...........\n  ...... NNN.MNO! . O!!!!!!!!!O . OONO NO! ........\n   .... MNNNNNO! ...OOOOOOOOOOO .  MMNNON!........\n   ...... MNNNNO! .. PPPPPPPPP .. MMNON!........\n      ...... OO! ................. ON! .......\n         ................................                               \n dev:@emretekno channel:@theostekno""")
+    print(theos)
+    print(f"""
+{Fore.RED}[0]{Fore.GREEN} -- üyelik bilgileri
+  
+{Fore.RED}[1]{Fore.GREEN} -- ad soyad sorgu 
+
+{Fore.RED}[2]{Fore.GREEN} -- TC sorgu 
+
+{Fore.RED}[3]{Fore.GREEN} -- GSM=>TC  
+
+{Fore.RED}[4]{Fore.GREEN} -- TC==>GSM
+
+{Fore.RED}[5]{Fore.GREEN} -- Okul no sorgu
+""") 
+    sec=input(Fore.RED+"lütfen bir seçenek seçiniz==> "+Fore.WHITE)
+    clear()
+    if sec=='0':
+    	uyelik=f"""   {Fore.LIGHTYELLOW_EX} Merhaba  Theos Sorgu Üyelik Bilgilerine Hoş geldiniz
+
+
+{Fore.GREEN}Fremium :
+  	
+{Fore.RED}•fiyat: {Fore.BLUE}ücretsiz  	
+{Fore.RED}•sorgular:{Fore.BLUE} ad soyad + TC sorgu
+
+
+
+{Fore.GREEN}Premium :
+	
+{Fore.RED}• Fiyat :{Fore.BLUE} 40 ₺
+{Fore.RED}• sorgular : {Fore.BLUE}ad soyad + tc + gsm + okul no
+  			
+  			
+  	{Fore.GREEN}üyelik almak isteyen @emretekno yazsın {Fore.WHITE}
+  		"""
+    	print(uyelik)
+    if sec=='1':
+    	print(theos)
+    	print(f"""
+{Fore.RED}[1]{Fore.GREEN} -- ad soyad ve doğum tarihi sorgu
+
+{Fore.RED}[2]{Fore.GREEN} -- ad soyad ve şehir sorgu
+""")
+    	sek=input(Fore.RED+"lütfen bir seçenek seçiniz==> "+Fore.WHITE)
+    	clear()
+    	if sek=='1':
+    		print(theos)
+    		isi=input(Fore.GREEN+"sorgulanacak kişinin adını giriniz ==> "+Fore.WHITE)
+    		clear()
+    		print(theos)
+    		soy=input(Fore.GREEN+"sorgulanacak kişinin soyadını giriniz==> "+Fore.WHITE)
+    		clear()
+    		print(theos)
+    		tarih=input(Fore.GREEN+"sorgulanacak kişinin doğum tarihini giriniz \nörn : 1.1.2000    ==> "+Fore.WHITE)
+    		clear()
+    		print(theos)
+    		ree=requests.get("https://birddos.tk/oc.php?ad="+isi+"&soyad="+soy+"&dogum="+tarih).text 
+    		if 'true' in ree:
+    			clear()
+    			isim=ree.split('"ADI":"')[1]
+    			isim=isim.split('","SOYADI')[0]
+    			soyisim=ree.split('SOYADI":"')[1]
+    			soyisim=soyisim.split('","DOGUMTARIHI')[0]
+    			tarih=ree.split('DOGUMTARIHI":"')[1]
+    			tarih=tarih.split('","NUFUSIL')[0]
+    			il=ree.split('NUFUSIL":"')[1]
+    			il=il.split('","NUFUSILCE')[0]
+    			ilce=ree.split('NUFUSILCE":"')[1]
+    			ilce.split('","ANNEADI')[0]
+    			anneadi=ree.split('ANNEADI":"')[1]
+    			anneadi=anneadi.split('","ANNETC')[0]
+    			annetc=ree.split('ANNETC":"')[1]
+    			annetc=annetc.split('","BABAADI')[0]
+    			babaadi=ree.split('BABAADI":"')[1]
+    			babaadi=babaadi.split('","BABATC')[0]
+    			babatc=ree.split('BABATC":"')[1]
+    			babatc=babatc.split('","UYRUK')[0]
+    			uyruk=ree.split('UYRUK":"')[1]
+    			uyruk=uyruk.split('"}]}')[0]
+    			print(Fore.RED+"-----------------------------------------------------------\n\n")
+    			print(f"{Fore.BLUE}[1]{Fore.YELLOW} İsim =>  {Fore.LIGHTGREEN_EX}"+isim)
+    			print(f"{Fore.BLUE}[2]{Fore.YELLOW} Soyisim=>{Fore.LIGHTGREEN_EX} "+soyisim)
+    			print(f"{Fore.BLUE}[3] {Fore.YELLOW}Doğum tarihi =>{Fore.LIGHTGREEN_EX}"+tarih)
+    			print(f"{Fore.BLUE}[4] {Fore.YELLOW}Anne adı =>{Fore.LIGHTGREEN_EX} "+anneadi)
+    			print(f"{Fore.BLUE}[5] {Fore.YELLOW}Anne tc => {Fore.LIGHTGREEN_EX}"+annetc)
+    			print(f"{Fore.BLUE}[6] {Fore.YELLOW}Baba adı => {Fore.LIGHTGREEN_EX}"+babaadi)
+    			print(f"{Fore.BLUE}[7] {Fore.YELLOW}Baba tc =>{Fore.LIGHTGREEN_EX} "+babatc)
+    			print(f"{Fore.BLUE}[8]{Fore.YELLOW} Adres il =>{Fore.LIGHTGREEN_EX} "+il)
+    			print(f"{Fore.BLUE}[9] {Fore.YELLOW}Adres ilçe=>{Fore.LIGHTGREEN_EX} "+ilce)
+    			print(f"{Fore.BLUE}[10]{Fore.YELLOW} Uyruk =>{Fore.LIGHTGREEN_EX}"+uyruk)
+    			print(Fore.RED+"-----------------------------------------------------------"+Fore.WHITE)
+    		if 'param error' in ree:
+    			clear()
+    			print(theos)
+    			print(Fore.RED+"Eksik veya hatalı girdiniz lütfen tekrar deneyiniz...")
+    		if 'not found' in ree:
+    			clear()
+    			print(Fore.RED+"kişi bulunmadı hatalı yazmış olabilirsiniz..."+Fore.WHITE)
+    	if sek=='2':
+    		print(theos)
+    		isim=input(Fore.GREEN+"sorgulanacak kişinin adını giriniz ==> "+Fore.WHITE)
+    		clear()
+    		print(theos)
+    		soyisim=input(Fore.GREEN+"sorgulanacak kişinin soyadını giriniz==> "+Fore.WHITE)
+    		clear()
+    		print(theos)
+    		il=input(Fore.GREEN+"sorgulanacak kişinin şehrini giriniz==> "+Fore.WHITE)
+    		clear()
+    		print(theos)
+    		req =requests.get("http://birddos.tk/oc.php?ad="+isim+"&soyad="+soyisim+"&adresil="+il,time.sleep(5)).text 
+    		clear()
+    		if 'true' in req:
+    			clear()
+    			print(Fore.WHITE+req)
+    		if 'param error' in req:
+    			clear()
+    			print(theos)
+    			print(Fore.RED+"Eksik veya hatalı girdiniz lütfen tekrar deneyiniz...")
+    		elif 'not found' in req:
+    			print(Fore.RED+"kişi bulunmadı hatalı yazmış olabilirsiniz..."+Fore.WHITE)
+    if sec=='2':
+    	clear()
+    	print(theos)
+    	tc=input(Fore.GREEN+"TC kimlik numarası gir==> "+Fore.WHITE) 
+    	clear()
+    	r= requests.get("http://birddos.tk/oc.php?tc="+tc,time.sleep(5)).text 
+    	if 'true"' in r:
+    		clear()
+    		isim=r.split('"ADI":"')[1]
+    		isim=isim.split('","SOYADI')[0]
+    		soyisim=r.split('SOYADI":"')[1]
+    		soyisim=soyisim.split('","DOGUMTARIHI')[0]
+    		tarih=r.split('DOGUMTARIHI":"')[1]
+    		tarih=tarih.split('","NUFUSIL')[0]
+    		il=r.split('NUFUSIL":"')[1]
+    		il=il.split('","NUFUSILCE')[0]
+    		ilce=r.split('NUFUSILCE":"')[1]
+    		ilce=ilce.split('","ANNEADI')[0]
+    		anneadi=r.split('ANNEADI":"')[1]
+    		anneadi=anneadi.split('","ANNETC')[0]
+    		annetc=r.split('ANNETC":"')[1]
+    		annetc=annetc.split('","BABAADI')[0]
+    		babaadi=r.split('BABAADI":"')[1]
+    		babaadi=babaadi.split('","BABATC')[0]
+    		babatc=r.split('BABATC":"')[1]
+    		babatc=babatc.split('","UYRUK')[0]
+    		uyruk=r.split('UYRUK":"')[1]
+    		uyruk=uyruk.split('"}]}')[0]
+    		print(Fore.RED+"-----------------------------------------------------------\n\n")
+    		print(f"{Fore.BLUE}[1]{Fore.YELLOW} İsim =>  {Fore.LIGHTGREEN_EX}"+isim)
+    		print(f"{Fore.BLUE}[2]{Fore.YELLOW} Soyisim=>{Fore.LIGHTGREEN_EX} "+soyisim)
+    		print(f"{Fore.BLUE}[3] {Fore.YELLOW}Doğum tarihi =>{Fore.LIGHTGREEN_EX}"+tarih)
+    		print(f"{Fore.BLUE}[4] {Fore.YELLOW}Anne adı =>{Fore.LIGHTGREEN_EX} "+anneadi)
+    		print(f"{Fore.BLUE}[5] {Fore.YELLOW}Anne tc => {Fore.LIGHTGREEN_EX}"+annetc)
+    		print(f"{Fore.BLUE}[6] {Fore.YELLOW}Baba adı => {Fore.LIGHTGREEN_EX}"+babaadi)
+    		print(f"{Fore.BLUE}[7] {Fore.YELLOW}Baba tc =>{Fore.LIGHTGREEN_EX} "+babatc)
+    		print(f"{Fore.BLUE}[8]{Fore.YELLOW} Adres il =>{Fore.LIGHTGREEN_EX} "+il)
+    		print(f"{Fore.BLUE}[9] {Fore.YELLOW}Adres ilçe=>{Fore.LIGHTGREEN_EX} "+ilce)
+    		print(f"{Fore.BLUE}[10]{Fore.YELLOW} Uyruk =>{Fore.LIGHTGREEN_EX}"+uyruk)
+    		
+    		print(Fore.RED+"-----------------------------------------------------------"+Fore.WHITE) 
+    	elif 'param error' in r:
+    		clear()
+    		print(theos)
+    		print(Fore.RED+"Eksik veya hatalı girdiniz lütfen tekrar deneyiniz...")
+    	elif 'not found' in r:
+    		clear()
+    		print(theos)
+    		print(Fore.RED+"TC kimlik numarasını kontrol edin sorun devam ederse @emretekno telegram hesabından ulaşın..."+Fore.WHITE)
+    if sec=='3':
+    	clear()
+    	print(theos)
+    	gsm=input(Fore.RED+"lütfen sorgulamak istediğiniz numarayı başında 0 olmadan giriniz ==>  ")
+    	rez=requests.get("https://birddos.tk/oc.php?gsm="+gsm,time.sleep(5)).text 
+    	if 'true' in rez:
+    		clear()
+    		print(theos)
+    		t=rez.split('TC":"')[1]
+    		t=t.split('","GSM')[0]
+    		print(Fore.GREEN+"\n"+"TC kimlik numarası==>"+t)
+    	if 'not found' in rez:
+    		clear()
+    		print(theos)
+    		print(Fore.RED+"Sorguladığınız numara hiçbir TC kimlik numarasının üstüne kayıtlı değildir")
+    	if 'param error' in rez:
+    		print(theos)
+    		print(Fore.RED+"Eksik veya hatalı girdiniz lütfen tekrar deneyiniz...")
+    if sec=='4':
+    	clear()
+    	print(theos)
+    	tckn=input(Fore.RED+"lütfen sorgulamak istediğiniz TC kimlik numarasını  giriniz ==>  ")
+    	rem=requests.get("https://birddos.tk/oc.php?tck="+tckn,time.sleep(5)).text 
+    	if 'true' in rem:
+    		clear()
+    		print(theos)
+    		g=rem.split('GSM":"')[1]
+    		g=g.split('"}')[0]
+    		print(Fore.GREEN+"\n"+"GSM numarası==> 0"+g)
+    	if 'not found' in rem:
+    		clear()
+    		print(theos)
+    		print(Fore.RED+"Sorguladığınız tc kimlik numarası hiçbir numaranın üstüne kayıtlı değildir")
+    	if 'param error' in rem:
+    		clear()
+    		print(theos)
+    		print(Fore.RED+"Eksik veya hatalı girdiniz lütfen tekrar deneyiniz...")
+    if sec=="5":
+    	clear()
+    	print(theos)
+    	tckk=input(Fore.GREEN+"lütfen okul no sorgulayacağınız kişinin tc kimlik numarası giriniz==>  ")
+    	reeeee=requests.get("https://noiresplesk.ml/beton-okulsorgu.php?tc="+tckk).text 
+    	if "ad" in reeeee:
+    		clear()
+    		ad=reeeee.split('ad] => ')[1]
+    		ad=ad.split(' [soyad]')[0]
+    		soyad=reeeee.split('soyad] => ')[1]
+    		soyad=soyad.split('[okulno')[0]
+    		okulno=reeeee.split('okulno] =>')[1]
+    		okulno=okulno.split('[durum')[0]
+    		durum=reeeee.split('durum] =>')[1] 
+    		durum=durum.split('[beton')[0]
+    		print(Fore.RED+"-----------------------------------------------------------"+Fore.WHITE)
+    		print(f"{Fore.BLUE}[1]{Fore.YELLOW} İsim =>  {Fore.LIGHTGREEN_EX}"+ad)
+    		print(f"{Fore.BLUE}[2]{Fore.YELLOW} Soy İsim =>  {Fore.LIGHTGREEN_EX}"+soyad)
+    		print(f"{Fore.BLUE}[3]{Fore.YELLOW} okul no =>  {Fore.LIGHTGREEN_EX}"+okulno)
+    		print(f"{Fore.BLUE}[4]{Fore.YELLOW} Durum =>  {Fore.LIGHTGREEN_EX}"+durum)
+    		print(Fore.RED+"-----------------------------------------------------------"+Fore.WHITE)
+
+
