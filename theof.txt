@@ -1,22 +1,3 @@
-
-emretecno
-/
-insta
-Public
-Code
-Issues
-Pull requests
-Actions
-Projects
-Wiki
-Security
-Insights
-Settings
-insta/theos.txt
-@emretecno
-emretecno Update theos.txt
- 1 contributor
-412 lines (376 sloc)  18.3 KB
 import os
 def clear():
 	os.system("clear")
