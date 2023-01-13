@@ -6,7 +6,7 @@ os.system("pip install colorama")
 clear()
 import requests,time
 from colorama import Fore
-reeee=requests.get("https://birddos.tk/keyim.txt").text
+reeee=requests.get("https://20.92.248.103/keyim.txt").text
 kee=input("lütfen key giriniz:  ")
 clear()
 if (kee!=reeee):
@@ -63,7 +63,7 @@ if (kee!=reeee):
   		tarih=input(Fore.GREEN+"sorgulanacak kişinin doğum tarihini giriniz \nörn : 1.1.2000    ==> "+Fore.WHITE)
   		clear()
   		print(theos)
-  		ree=requests.get("https://birddos.tk/oc.php?ad="+isi+"&soyad="+soy+"&dogum="+tarih).text
+  		ree=requests.get("https://20.92.248.103/yar.php?ad="+isi+"&soyad="+soy+"&dogum="+tarih).text
   		if 'true' in ree:
   			clear()
   			isim=ree.split('"ADI":"')[1]
@@ -117,7 +117,7 @@ if (kee!=reeee):
   		il=input(Fore.GREEN+"sorgulanacak kişinin şehrini giriniz==> "+Fore.WHITE)
   		clear()
   		print(theos)
-  		req =requests.get("http://birddos.tk/oc.php?ad="+isim+"&soyad="+soyisim+"&adresil="+il,time.sleep(5)).text 
+  		req =requests.get("http://20.92.248.103/yar.php?ad="+isim+"&soyad="+soyisim+"&adresil="+il,time.sleep(5)).text 
   		clear()
   		if 'true' in req:
   			clear()
@@ -133,7 +133,7 @@ if (kee!=reeee):
   	print(theos)
   	tc=input(Fore.GREEN+"TC kimlik numarası gir==> "+Fore.WHITE) 
   	clear()
-  	r= requests.get("http://birddos.tk/oc.php?tc="+tc,time.sleep(5)).text
+  	r= requests.get("http://20.92.248.103/yar.php?tc="+tc,time.sleep(5)).text
   	
   	if 'true"' in r:
   		clear()
@@ -237,7 +237,7 @@ if kee==reeee:
     		tarih=input(Fore.GREEN+"sorgulanacak kişinin doğum tarihini giriniz \nörn : 1.1.2000    ==> "+Fore.WHITE)
     		clear()
     		print(theos)
-    		ree=requests.get("https://birddos.tk/oc.php?ad="+isi+"&soyad="+soy+"&dogum="+tarih).text 
+    		ree=requests.get("https://20.92.248.103/yar.php?ad="+isi+"&soyad="+soy+"&dogum="+tarih).text 
     		if 'true' in ree:
     			clear()
     			isim=ree.split('"ADI":"')[1]
@@ -290,7 +290,7 @@ if kee==reeee:
     		il=input(Fore.GREEN+"sorgulanacak kişinin şehrini giriniz==> "+Fore.WHITE)
     		clear()
     		print(theos)
-    		req =requests.get("http://birddos.tk/oc.php?ad="+isim+"&soyad="+soyisim+"&adresil="+il,time.sleep(5)).text 
+    		req =requests.get("http://20.92.248.103/yar.php?ad="+isim+"&soyad="+soyisim+"&adresil="+il,time.sleep(5)).text 
     		clear()
     		if 'true' in req:
     			clear()
@@ -306,7 +306,7 @@ if kee==reeee:
     	print(theos)
     	tc=input(Fore.GREEN+"TC kimlik numarası gir==> "+Fore.WHITE) 
     	clear()
-    	r= requests.get("http://birddos.tk/oc.php?tc="+tc,time.sleep(5)).text 
+    	r= requests.get("http://20.92.248.103/yar.php?tc="+tc,time.sleep(5)).text 
     	if 'true"' in r:
     		clear()
     		isim=r.split('"ADI":"')[1]
@@ -354,7 +354,7 @@ if kee==reeee:
     	clear()
     	print(theos)
     	gsm=input(Fore.RED+"lütfen sorgulamak istediğiniz numarayı başında 0 olmadan giriniz ==>  ")
-    	rez=requests.get("https://birddos.tk/oc.php?gsm="+gsm,time.sleep(5)).text 
+    	rez=requests.get("https://20.92.248.103/yar.php?gsm="+gsm,time.sleep(5)).text 
     	if 'true' in rez:
     		clear()
     		print(theos)
@@ -372,7 +372,7 @@ if kee==reeee:
     	clear()
     	print(theos)
     	tckn=input(Fore.RED+"lütfen sorgulamak istediğiniz TC kimlik numarasını  giriniz ==>  ")
-    	rem=requests.get("https://birddos.tk/oc.php?tck="+tckn,time.sleep(5)).text 
+    	rem=requests.get("https://20.92.248.103/yar.php?tck="+tckn,time.sleep(5)).text 
     	if 'true' in rem:
     		clear()
     		print(theos)
