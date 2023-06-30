@@ -1,1 +1,1 @@
-print("tool artık satılıktır almak için @emretekno ya yazınız")
+print("tool artık satılıktır almak için t.me/emreklasic ya yazınız")
